@@ -1,0 +1,10 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost:3000', {query: {token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDViYTllY2RlNDdiMTE1M2M3NjM1MWQiLCJpYXQiOjE1NjYyODk0MDksImV4cCI6MTU2NjI5MzAwOX0.Bn6573CKZ2mvpD2peTf6tzOzVqoseT3ksxYWC0uBRpM"}});
+  socket.on('5d5ba9ecde47b1153c76351d', function (data) {
+    console.log("New Chat: ",data.chat);
+  });
+  socket.on('5d5bab36a031621afcbeae1d', (data) => {
+      console.log("New Message: ",data.message);
+  });
+</script>
